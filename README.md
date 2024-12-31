@@ -110,27 +110,31 @@ The application features a simple interface that enables users to:
 2. Perform real-time ⚡⏱️ emotion classification for a sentence on the emotion classification page, allowing users to test the model's ability to classify emotions directly from the interface.
 
 
-# Folder Structure
+# Folder Structure 🗂️
 ## Application
-This folder contains the application code.
+This folder [Application](./Application) contains the application code - the implementation of the Streamlit-based interface for emotion classification and data visualization.
 
 ## Dataset
-This folder contains the datasets used for training and testing the model. It includes data in both Indonesian and English. The data is already split into three sets with the following proportions:
+This folder [Dataset](./Dataset) Houses the datasets used for training and testing the model. The data is organized and split as follows:
 - 70% for training
 - 15% for validation
 - 15% for testing
+Datasets are available in both Indonesian and English.
 
 ## Dictionary
-This folder contains the slang word dictionaries created by the authors and a combined file from five slang dictionaries used in the preprocessing steps.
+This folder [Dictionary](./Dictionary) Contains the slang word dictionaries utilized during the preprocessing stage, including:
+- Custom slang word dictionary created by the authors.
+- A combined file incorporating entries from five other slang dictionaries.
 
 ## Model
-This folder stores the trained best-performing model file with a .pth extension. 
+This folder [Model](./Model) Stores the trained best-performing model file in .pth format, representing the IndoBERT Large Phase 2 model.
 
 ## Contributors
 - Belinda Mutiara
 - Florencia
 - Gabrielle Felicia Ariyanto
 
+---
 ## References
 <a id="reference-1">[1. Saputri, M. S., Mahendra, R., & Adriani, M. (2018). Emotion Classification on Indonesian Twitter Dataset. Proceedings of the 2018 International Conference on Asian Language Processing, IALP 2018, 90–95. Institute of Electrical and Electronics Engineers Inc.](https://doi.org/10.1109/IALP.2018.8629262)
 
