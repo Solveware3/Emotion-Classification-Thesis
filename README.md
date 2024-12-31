@@ -6,4 +6,5 @@ Emotions in text, particularly in tweets related to the 2024 elections, reflect 
 - joy ☺️
 - love 🥰
 - fear 😱
+  
 Analyzing these emotions is crucial for understanding collective public sentiment, identifying sensitive issues, and providing valuable insights to support data-driven decision-making.
