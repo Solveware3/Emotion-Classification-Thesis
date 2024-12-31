@@ -131,7 +131,7 @@ This folder stores the trained best-performing model file with a .pth extension.
 - Florencia
 - Gabrielle Felicia Ariyanto
 
-References
+## References
 <a id="reference-1">[1] Saputri, M. S., Mahendra, R., & Adriani, M. (2018). Emotion Classification on Indonesian Twitter Dataset. Proceedings of the 2018 International Conference on Asian Language Processing, IALP 2018, 90–95. Institute of Electrical and Electronics Engineers Inc. https://doi.org/10.1109/IALP.2018.8629262
 
 <a id="reference-2">[2] Salsabila, N. A., Winatmoko, Y. A., Septiandri, A. A., & Jamal, A. (2018). Colloquial Indonesian Lexicon. 327.
