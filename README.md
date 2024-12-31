@@ -56,7 +56,7 @@ Output: "Bagaimana kabar? Semoga sehat, by the way, kamu adalah sahabat terbaik 
 This method 
 
 ### Combination of GPT and Traditional Method 🤖 + 📑 
-This method combines the **GPT-based ** approach and **the traditional** preprocessing method. The process is carried out in two steps:
+This method combines the **GPT-based** approach and **the traditional** preprocessing method. The process is carried out in two steps:
 1. GPT-Based Preprocessing (Method 2)
 The dataset is initially processed using the steps outlined in the GPT-4 method. This step ensures consistent and clean text while preserving context for emotion classification.
 2. Traditional Preprocessing (Method 1)
