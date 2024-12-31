@@ -3,7 +3,7 @@
 Emotions in text, particularly in tweets related to the 2024 elections, reflect the public's feelings about specific issues or candidates. This project focuses on classifying five primary emotions: 
 - anger 😡
 - sadness 😢
-- joy ☺️
+- joy 😊
 - love 🥰
 - fear 😱
   
