@@ -127,14 +127,17 @@ This folder contains the slang word dictionaries created by the authors and a co
 This folder stores the trained best-performing model file with a .pth extension. 
 
 ## Contributors
-Belinda Mutiara
-Florencia
-Gabrielle Felicia Ariyanto
+- Belinda Mutiara
+- Florencia
+- Gabrielle Felicia Ariyanto
 
 References
 <a id="reference-1">[1] Saputri, M. S., Mahendra, R., & Adriani, M. (2018). Emotion Classification on Indonesian Twitter Dataset. Proceedings of the 2018 International Conference on Asian Language Processing, IALP 2018, 90–95. Institute of Electrical and Electronics Engineers Inc. https://doi.org/10.1109/IALP.2018.8629262
+
 <a id="reference-2">[2] Salsabila, N. A., Winatmoko, Y. A., Septiandri, A. A., & Jamal, A. (2018). Colloquial Indonesian Lexicon. 327.
+
 <a id="reference-3">[3] Ibrohim, M. O., & Budi, I. (2018). A Dataset and Preliminaries Study for Abusive Language Detection in Indonesian Social Media. Procedia Computer Science, 135, 222–229. Elsevier B.V. https://doi.org/10.1016/j.procs.2018.08.169
+
 <a id="reference-4">[4] Purwitasari, D., Putra, C. B. P., & Raharjo, A. B. (2023). A stance dataset with aspect-based sentiment information from Indonesian COVID-19 vaccination-related tweets. Data in Brief, 47. https://doi.org/10.1016/j.dib.2023.108951
 
 
