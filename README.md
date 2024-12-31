@@ -61,9 +61,9 @@ This method combines the **GPT-based ** approach and **the traditional** preproc
    The dataset is initially processed using the steps outlined in the GPT-4 method. This step ensures consistent and clean text while preserving context for emotion classification.
 2. Traditional Preprocessing (Method 1)
   The output from GPT-4 is then further refined using the following traditional preprocessing steps:
-- Converting all text to lowercase: Standardizes the text to improve consistency.
-- Removing irrelevant elements: Numbers, symbols, URLs, usernames, and tags are eliminated to avoid noise in the data.
-- Normalizing slang words: Slang terms are mapped to their formal equivalents using five slang dictionaries collected from previous research and created by the authors.
+  - Converting all text to lowercase: Standardizes the text to improve consistency.
+  - Removing irrelevant elements: Numbers, symbols, URLs, usernames, and tags are eliminated to avoid noise in the data.
+  - Normalizing slang words: Slang terms are mapped to their formal equivalents using five slang dictionaries collected from previous research and created by the authors.
 
 ## Deep Learning Models
 Each dataset that has undergone the preprocessing stage is then used to train several deep learning models, including:
