@@ -111,25 +111,25 @@ The application features a simple interface that enables users to:
 
 
 # Folder Structure 🗂️
-## Application
+## 📱 Application
 This folder [Application](./Application) — Contains the application code. The implementation of the Streamlit-based interface for emotion classification and data visualization.
 
-## Dataset
+## 📂 Dataset 
 This folder [Dataset](./Dataset) — Houses the datasets used for training and testing the model. The data is organized and split as follows:
 - 70% for training
 - 15% for validation
 - 15% for testing
 Datasets are available in both Indonesian and English.
 
-## Dictionary
+## 📚 Dictionary
 This folder [Dictionary](./Dictionary) — Contains the slang word dictionaries utilized during the preprocessing stage, including:
 - Custom slang word dictionary created by the authors.
 - A combined file incorporating entries from five other slang dictionaries.
 
-## Model
+## 🚀 Model
 This folder [Model](./Model) — Stores the trained best-performing model file in .pth format, representing the IndoBERT Large Phase 2 model.
 
-## Contributors
+## 👥👥 Contributors
 - Belinda Mutiara
 - Florencia
 - Gabrielle Felicia Ariyanto
