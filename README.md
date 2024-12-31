@@ -61,15 +61,41 @@ This method combines the **GPT-based ** approach and **the traditional** preproc
 The dataset is initially processed using the steps outlined in the GPT-4 method. This step ensures consistent and clean text while preserving context for emotion classification.
 2. Traditional Preprocessing (Method 1)
 The output from GPT-4 is then further refined using the following traditional preprocessing steps:
-  - Converting all text to lowercase: Standardizes the text to improve consistency.
-  - Removing irrelevant elements: Numbers, symbols, URLs, usernames, and tags are eliminated to avoid noise in the data.
-  - Normalizing slang words: Slang terms are mapped to their formal equivalents using five slang dictionaries collected from previous research and created by the authors.
+    - Converting all text to lowercase: Standardizes the text to improve consistency.
+    - Removing irrelevant elements: Numbers, symbols, URLs, usernames, and tags are eliminated to avoid noise in the data.
+    - Normalizing slang words: Slang terms are mapped to their formal equivalents using five slang dictionaries collected from previous research and created by the authors.
 
-## Deep Learning Models
+## Deep Learning Models 🧠💻
 Each dataset that has undergone the preprocessing stage is then used to train several deep learning models, including:
 - IndoBERT for dataset in Indonesian
 - RoBERTa for dataset in English
 - DeBERTa for dataset in English
+  
+For RoBERTa and DeBERTa, the dataset is translated 🌐🔠 into English since the pre-trained models are based on English corpora. During the translation process, experiments are conducted using three different translation tools:
+- Deep Translator
+- Google Translator
+- TextBlob
+The goal of these experiments is to determine which translation tool produces the best quality translations. 
+
+### Model Experimentaion ⚙️📊 
+Several parameters were tested to optimize model performance. However, the number of neurons remained the same with the architecture of the pre-trained model used. The parameters used including:
+- Pre-trained model (base/large)
+- Number of epochs
+- Batch size
+- Learning rate
+- Optimizer
+
+After conducting a series of experiments, the best model was obtained using IndoBERT Large Phase 2 and the most effective preprocessing method, which was the combination of GPT & Traditional approaches.
+#### 🏆📈 Best model configuration details :
+- Data split: 70% training, 15% validation, 15% testing
+- Number of epochs: 5
+- Batch size: 32
+- Learning rate: 5e-6
+- Optimizer: Adam
+This model achieved an **accuracy** and** weighted average F1-score** of **86%**.
+
+
+
 
 
 
