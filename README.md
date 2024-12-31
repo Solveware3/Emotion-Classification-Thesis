@@ -103,10 +103,10 @@ Subsequently, the model was integrated into a **Streamlit-based application**, a
 
 The application features a simple interface that enables users to:
 1. View data visualizations on the Indonesian 2024 election tweet samples on the dashboard page, such as:
-- Bar chart 📊 and donut chart 🍩 showing the emotion distribution for each presidential candidate
-- Word Clouds ☁️  for visual representation of keywords  🔑 
-- Emotion trend lines 📉 over time 📅 
-- Last 10 tweets 🐤 and its emotion 🎭
+    - Bar chart 📊 and donut chart 🍩 showing the emotion distribution for each presidential candidate
+    - Word Clouds ☁️  for visual representation of keywords  🔑 
+    - Emotion trend lines 📉 over time 📅 
+    - Last 10 tweets 🐤 and its emotion 🎭
 2. Perform real-time ⚡⏱️ emotion classification for a sentence on the emotion classification page, allowing users to test the model's ability to classify emotions directly from the interface.
 
 
