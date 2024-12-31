@@ -132,7 +132,7 @@ This folder [Model](./Model) — Stores the trained best-performing model file i
 ## 👥👥 Contributors
 - Belinda Mutiara
 - Florencia
-- Gabrielle Felicia Ariyanto
+- [`Gabrielle Felicia Ariyanto`](https://github.com/GabrielleFeliciaA)
 
 ---
 ## References
