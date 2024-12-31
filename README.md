@@ -31,10 +31,10 @@ In this method, preprocessing is performed through the following steps:
 
 2. **Slang Normalization**:
    - Normalize slang words using five slang dictionaries collected from previous research and created by the authors:
-     - **Kamus Singkatan Meisaputri** [1]
-     - **Kamus Colloquial Indonesian** [2]
-     - **Kamus Alay** [3]
-     - **Kamus Gabungan Louis Owen** [4]
+     - **Kamus Singkatan Meisaputri** [1](#reference-1)
+     - **Kamus Colloquial Indonesian** [2](#reference-2)
+     - **Kamus Alay** [3](#reference-3)
+     - **Kamus Gabungan Louis Owen** [4](#reference-4)
      - **Custom Slang Dictionary**: Created by the authors using slang words from the training dataset, refined with proper word suggestions from the Indonesian Dictionary (*Kamus Besar Bahasa Indonesia*, KBBI).
 
 These steps ensure that the text is cleaned and standardized, providing a solid foundation for emotion classification.
@@ -110,7 +110,32 @@ The application features a simple interface that enables users to:
 2. Perform real-time ⚡⏱️ emotion classification for a sentence on the emotion classification page, allowing users to test the model's ability to classify emotions directly from the interface.
 
 
+# Folder Structure
+## Application
+This folder contains the application code.
 
+## Dataset
+This folder contains the datasets used for training and testing the model. It includes data in both Indonesian and English. The data is already split into three sets with the following proportions:
+- 70% for training
+- 15% for validation
+- 15% for testing
+
+## Dictionary
+This folder contains the slang word dictionaries created by the authors and a combined file from five slang dictionaries used in the preprocessing steps.
+
+## Model
+This folder stores the trained best-performing model file with a .pth extension. 
+
+## Contributors
+Belinda Mutiara
+Florencia
+Gabrielle Felicia Ariyanto
+
+References
+<a id="reference-1">[1] Saputri, M. S., Mahendra, R., & Adriani, M. (2018). Emotion Classification on Indonesian Twitter Dataset. Proceedings of the 2018 International Conference on Asian Language Processing, IALP 2018, 90–95. Institute of Electrical and Electronics Engineers Inc. https://doi.org/10.1109/IALP.2018.8629262
+<a id="reference-2">[2] Salsabila, N. A., Winatmoko, Y. A., Septiandri, A. A., & Jamal, A. (2018). Colloquial Indonesian Lexicon. 327.
+<a id="reference-3">[3] Ibrohim, M. O., & Budi, I. (2018). A Dataset and Preliminaries Study for Abusive Language Detection in Indonesian Social Media. Procedia Computer Science, 135, 222–229. Elsevier B.V. https://doi.org/10.1016/j.procs.2018.08.169
+<a id="reference-4">[4] Purwitasari, D., Putra, C. B. P., & Raharjo, A. B. (2023). A stance dataset with aspect-based sentiment information from Indonesian COVID-19 vaccination-related tweets. Data in Brief, 47. https://doi.org/10.1016/j.dib.2023.108951
 
 
 
