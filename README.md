@@ -96,6 +96,23 @@ This model achieved an **accuracy** and** weighted average F1-score** of **86%**
 
 
 
+## Best Model Implementation 🏆 🖥️ 
+After obtaining the best model, **IndoBERT Large Phase 2** with the **Combination of GPT & Traditional** for preprocessing, which achieved an** accuracy and weighted average F1-score** of **86%**, the model was implemented on tweets related to the Indonesian 2024 elections.
+The 2024 election🗳️  tweets were collected through a scraping process using tweet-harvest. This process generated a sample set of tweets relevant to the 2024 election topic, which was then used as input for the emotion classification model.
+Subsequently, the model was integrated into a **Streamlit-based application**, allowing users to directly experiment with the emotion classification model. 
+
+The application features a simple interface that enables users to:
+1. View data visualizations on the Indonesian 2024 election tweet samples on the dashboard page, such as:
+- Bar chart 📊 and donut chart 🍩 showing the emotion distribution for each presidential candidate
+- Word Clouds ☁️  for visual representation of keywords  🔑 
+- Emotion trend lines 📉 over time 📅 
+- Last 10 tweets 🐤 and its emotion 🎭
+2. Perform real-time ⚡⏱️ emotion classification for a sentence on the emotion classification page, allowing users to test the model's ability to classify emotions directly from the interface.
+
+
+
+
+
 
 
 
