@@ -112,7 +112,7 @@ The application features a simple interface that enables users to:
 
 # Folder Structure 🗂️
 ## Application
-This folder [Application](./Application) — Contains the application code - the implementation of the Streamlit-based interface for emotion classification and data visualization.
+This folder [Application](./Application) — Contains the application code. The implementation of the Streamlit-based interface for emotion classification and data visualization.
 
 ## Dataset
 This folder [Dataset](./Dataset) — Houses the datasets used for training and testing the model. The data is organized and split as follows:
