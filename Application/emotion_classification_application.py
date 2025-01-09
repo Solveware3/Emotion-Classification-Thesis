@@ -96,7 +96,6 @@ with tab1:
     def bar_chart(source, tile):
         source = filterCandidate(source)
         source = count_freq(source)
-        # tile.write("Label Distribution")
         unique_candidates = source["candidates"].unique()
         if len(unique_candidates) == 1:
             candidate_name = unique_candidates[0]  
@@ -116,20 +115,14 @@ with tab1:
     
     # Function to download and load stopwords
     def load_stopwords():
-        # Download the stopwords if not already done
         nltk.download('stopwords')
-        
-        # Load the stopwords for Indonesian
         stopwords_indonesian = set(stopwords.words('indonesian'))
-        
-        # Add custom stopwords if needed
         custom_stopwords = {'http', 'https', 't.co', 'RT', 'amp', 'like'}
         stopwords_indonesian.update(custom_stopwords)
         
         stopwords_indonesian = {word.lower() for word in stopwords_indonesian}
         return stopwords_indonesian
 
-    # Load stopwords once, making them accessible globally
     stopwords_indonesian = load_stopwords()
 
     def normalize_text(text):
@@ -202,22 +195,20 @@ with tab1:
         source = source.groupby(pd.Grouper(freq='D')).value_counts(subset=['label'])
         source = source.to_frame()
         source = source.reset_index(level=['label', 'date'])
-
-        # tile.write("Label Distribution Over Time")
+        
         unique_candidates = st.session_state.get('candidates', [])
 
         if len(unique_candidates) == 1:
-            candidate_name = unique_candidates[0]  # Take the only candidate
+            candidate_name = unique_candidates[0]  
             title = f"Distribusi Label Berdasarkan Waktu ({candidate_name})"
-            background_color = '#dcdcdc'  # Set background color for a single candidate
+            background_color = '#dcdcdc'  
         elif len(unique_candidates) > 1:
             title = "Distribusi Label Berdasarkan Waktu (Seluruh Pasangan)"
-            background_color = '#dcdcdc'  # Set background color for multiple candidates
+            background_color = '#dcdcdc'  
         else:
             title = "Distribusi Label Berdasarkan Waktu (Seluruh Pasangan)"
-            background_color = '#dcdcdc'  # Default background color for no candidates selected
+            background_color = '#dcdcdc'  
 
-        # Display the title with the background color
         tile.write(f"""
             <div style="background-color: #f0f8ff; color: black; padding: 10px; border-radius: 0px; font-size: 16px; width: 200%; text-align: center;">
                 {title}
@@ -228,9 +219,9 @@ with tab1:
         chart = alt.Chart(source).mark_line(point=True).encode(
             x=alt.X('date:T', title='Date', axis=alt.Axis(format='%b %d')),
             y='count:Q',
-            color=alt.Color('label:N', legend=None),  # Hilangkan legend
+            color=alt.Color('label:N', legend=None),  
         ).properties(
-            width=1090,  # Width of the chart
+            width=1090, 
             height=500
         )
 
@@ -239,64 +230,30 @@ with tab1:
 
     def display_latest_tweets(source, tile):
         source = filterCandidate(source)
-        # if candidate:
-            # source = source[source['candidates'] == candidate]
-        # Set the max column width to None so tweets are not truncated
         pd.set_option("display.max_colwidth", None)
-
-        # Mengonversi kolom 'date' ke format datetime jika belum
         source['date'] = pd.to_datetime(source['date'])
-
-        # Mengurutkan data berdasarkan tanggal secara menurun
         df_sorted = source.sort_values(by='date', ascending=False)
-
-        # Menampilkan 10 tweet terbaru
         latest_10_tweets = df_sorted.head(10)
-
-        # tile.write("Latest Tweets: Top 10")
         unique_candidates = source["candidates"].unique()
 
-# Determine the title based on the number of unique candidates
         if len(unique_candidates) == 1:
-            candidate_name = unique_candidates[0]  # Take the only candidate
+            candidate_name = unique_candidates[0]  
             title = f"Tweet Terbaru: Top 10 ({candidate_name})"
-            background_color = 'skyblue'  # Set background color for single candidate
+            background_color = 'skyblue' 
         else:
             title = "Tweet Terbaru: Top 10 (Seluruh Pasangan)"
-            background_color = '#dcdcdc'  # Set background color for multiple candidates
-
-        # Display the title with the background color
+            background_color = '#dcdcdc'  
+            
         tile.write(f"""
             <div style="background-color: #f0f8ff; color: black; padding: 10px; border-radius: 0px; font-size: 16px; width: 100%; text-align: center;">
                 {title}
             </div>
             <br>
         """, unsafe_allow_html=True)
-        # tile.dataframe(latest_10_tweets[['tweet', 'label']].reset_index(drop=True), use_container_width=True, hide_index=True)
+    
         tile.write(latest_10_tweets[['tweet', 'label']].to_html(index=False, justify = 'center'), unsafe_allow_html=True)
 
-        # Mengembalikan DataFrame yang sudah diurutkan
         return source
-
-    def area_chart(source, tile):
-        # Pastikan untuk memfilter data terlebih dahulu
-        source = filterCandidate(source)  # Asumsi: filterCandidate adalah fungsi yang sudah ada
-
-        # Mengubah kolom 'date' menjadi format datetime dan mengatur indeks
-        source['date'] = pd.to_datetime(source['date'])
-        source = source.set_index('date')
-
-        # Group by berdasarkan tanggal dengan agregasi count (mengabaikan label)
-        source_grouped = source.groupby(pd.Grouper(freq='D')).size().reset_index(name='count')
-
-        # Membuat chart area menggunakan Altair
-        chart = alt.Chart(source_grouped).mark_area().encode(
-            x=alt.X('date:T', title='Date', axis=alt.Axis(format='%b %d')),  # Format tanggal
-            y=alt.Y('count:Q', title='Count')  # Sumbu Y untuk jumlah
-        ).properties(
-            title='Area Chart of Counts'
-        )
-        return tile.altair_chart(chart, theme="streamlit", use_container_width=True)
 
     row1[0] = getDonutChart(df, row1[0].container())
     row1[1] = bar_chart(df, row1[1].container())
@@ -572,10 +529,10 @@ with tab2:
             # Tokenize input text
             tokens = tokenizer(
                 cleaned_tweet,
-                padding='max_length',  # Pad to max_length
+                padding='max_length', 
                 max_length=128,        
                 truncation=True,
-                return_tensors="pt"    # Return PyTorch tensors
+                return_tensors="pt"   
             )
 
             # Extract tokenized data and move to the same device as the model
@@ -585,8 +542,7 @@ with tab2:
             if token_type_batch is not None:
                 token_type_batch = token_type_batch.to(device)
 
-            # Forward pass to get logits
-            with torch.no_grad():  # No need to compute gradients
+            with torch.no_grad():  
                 logits = model(
                     input_ids=subword_batch,
                     attention_mask=mask_batch,
@@ -609,7 +565,7 @@ with tab2:
                 st.write('**Kalimat anda berhasil diproses!**')
             
             prediction_text = f"<b>Prediksi Emosi: {label}{emoji} ({confidence:.3f}%)</b>"
-            result = f'<b>Teks</b>: {cleaned_tweet}'#<br>{prediction_text}'
+            result = f'<b>Teks</b>: {cleaned_tweet}'
             prediction = label
 
         st.write(f"""
